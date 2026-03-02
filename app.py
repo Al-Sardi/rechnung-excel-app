@@ -44,7 +44,7 @@ SHEET_CONFIG = {
 
 def extract_invoice_data(image_bytes, api_key):
     genai.configure(api_key=api_key)
-    model = genai.GenerativeModel("gemini-1.5-flash")
+    model = genai.GenerativeModel("gemini-1.5-flash-latest")
     img = Image.open(io.BytesIO(image_bytes))
     prompt = """Analysiere diese Rechnung und extrahiere folgende Daten als JSON.
 Antworte NUR mit dem JSON-Objekt, ohne Markdown-Codebloecke oder sonstigen Text.
